@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1; /* Faz o conteúdo crescer e empurra o footer pra baixo */
+  }
+
+.bg-caramelo {
+    background-color: #BC8950;
+}
+
+.logo-navbar {
+    height: 70px;
+    width: auto;
+}
+
+.font-logo {
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+.btn-azul {
+    background-color: #648C85;
+    color: white;
+    border: none;
+}
+
+.btn-azul:hover {
+    background-color: #54756F;
+}
