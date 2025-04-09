@@ -1,44 +1,11 @@
 <!-- Envolve tudo num container com altura mínima de 100vh e flex-column -->
 <div class="d-flex flex-column min-vh-100">
-
-  <!-- NAVBAR -->
-  <div class="bg-caramelo">
-    <div class="container">
-      <header class="d-flex justify-content-between align-items-center">
-        <div class="">
-          <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="" class="logo-navbar">
-          <h4 class="d-inline-block align-text-top font-logo">Café Late</h4>
-        </div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
-          <button class="btn btn-azul" type="submit">Buscar</button>
-        </form>
-        <nav>
-          <ul class="nav">
-            <!-- <li class="nav-item">
-              <a class="nav-link text-white" href="#">Produtos</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Carrinho</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Cadastro</a>
-            </li>
-          </ul>
-        </nav>      
-      </header>
-    </div>
-  </div>
+  <app-navbar></app-navbar>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="flex-grow-1">
     <router-outlet></router-outlet>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quam, rem maiores...</p>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-caramelo text-center text-white py-3">
-    <p class="mb-0">© 2025 Café Late. Todos os direitos reservados.</p>
-  </footer>
-
+  <app-footer></app-footer>
 </div>

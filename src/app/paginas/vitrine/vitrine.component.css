@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-weight: bold;
+    color: white;
+    background-color: #648C85;
+}
+  
+.row {
+    justify-content: center;
+}
+  
+
+app-cartao-produto {
+    display: flex;
+    justify-content: center;
+}
+  
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        display: flex;
+        justify-content: center;
+    }
+}
+  

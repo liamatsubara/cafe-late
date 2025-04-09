@@ -1,0 +1,20 @@
+<div class="box-caramel">
+  <span class="box__right">
+    <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </span>
+  <span class="box__left">
+    <img src="" alt="">
+  </span>
+</div>
+<div class="box-green">
+  <h2 class="text-center my-4">Conheça nossos produtos Late</h2>
+</div>
+<div class="row">
+  <div class="col-md-4 mb-4" *ngFor="let produto of produtos">
+    <app-cartao-produto
+      [nome]="produto.nome"
+      [preco]="produto.preco"
+      [imagem]="produto.imagem">
+    </app-cartao-produto>
+  </div>
+</div>
