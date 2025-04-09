@@ -1,0 +1,23 @@
+.card {
+    background-color: #3a2e2e;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+
+  .btn-detalhes {
+    background-color: #648C85;
+    border: 1px solid #648C85;
+    border-radius: 5px;
+    color: white;
+    box-shadow: none;
+    /* text-decoration: none; */
+  }
