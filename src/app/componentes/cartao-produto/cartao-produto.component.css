@@ -1,9 +1,9 @@
 .cartao-produto {
   background-color: #3D2920;
   border-radius: 16px;
-  padding: 16px;
   text-align: center;
   width: 200px;
+  height: 250px;
   color: white;
   display: flex;
   flex-direction: column;
