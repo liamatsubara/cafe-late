@@ -19,4 +19,3 @@ export class VitrineComponent {
     { nome: 'Terrier da Mantiqueira', preco: 49.00, imagem: 'produtos/produto6.png' },
   ];
 }
-
