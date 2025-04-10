@@ -2,8 +2,8 @@
   background-color: #3D2920;
   border-radius: 16px;
   text-align: center;
-  width: 200px;
-  height: 250px;
+  width: 255px;
+  height: 380px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -12,16 +12,30 @@
 }
   
 .product-image {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin-bottom: 1rem;
 }
   
 
 .btn-detalhes {
+  background-color: #C1B494;
+  border: 1px solid #C1B494;
+  border-radius: 5px;
+  color: white;
+  box-shadow: none;
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
+}
+
+.btn-comprar {
   background-color: #648C85;
   border: 1px solid #648C85;
   border-radius: 5px;
   color: white;
   box-shadow: none;
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
 }
