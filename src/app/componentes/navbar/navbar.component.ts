@@ -11,9 +11,9 @@ import { RouterModule } from '@angular/router';
   standalone: true
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
-
   menuAberto = false;
+
+  constructor(private router: Router) {}
 
   toggleMenu(): void {
     this.menuAberto = !this.menuAberto;
