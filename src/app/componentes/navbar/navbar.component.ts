@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
   standalone: true
@@ -12,6 +13,12 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent {
   constructor(private router: Router) {}
 
+  menuAberto = false;
+
+  toggleMenu(): void {
+    this.menuAberto = !this.menuAberto;
+  }
+  
   buscarProduto(event: Event, input: HTMLInputElement) {
     event.preventDefault();
     const termo = input.value.trim();
