@@ -36,15 +36,14 @@
 
     .popover-menu {
         position: absolute;
-        top: 100%;
-        left: -14px; /* gambiarra */
-        width: 107%; /* gambiarra */
+        top: 9vh;
+        left: -120px;
+        width: 100%;
         background-color: #bc8950;
         padding: 1rem;
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        z-index: 1000;
         border-radius: 0 0 12px 12px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       }
