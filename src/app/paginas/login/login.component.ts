@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TopBarComponent } from '../../componentes/top-bar/top-bar.component';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [TopBarComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
