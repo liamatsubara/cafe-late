@@ -1,0 +1,18 @@
+<app-top-bar [title]="'Resultado da busca por: ' + termoBusca"></app-top-bar>
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div *ngIf="produtosFiltrados.length === 0" class="text-center">
+      <p>Nenhum produto encontrado.</p>
+    </div>
+    <div class="col-md-4 mb-4" *ngFor="let produto of produtosFiltrados">
+      <app-cartao-produto
+        [id]="produto.id"
+        [nome]="produto.nome"
+        [preco]="produto.preco"
+        [imagem]="produto.imagem">
+      </app-cartao-produto>
+    </div>
+  </div>
+</div>

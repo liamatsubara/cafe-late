@@ -6,10 +6,11 @@
           <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="" class="logo-navbar">
           <h4 class="d-inline-block align-text-top font-logo">Café Late</h4>
         </div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
+        <form class="d-flex" role="search" (submit)="buscarProduto($event, buscaInput)">
+          <input #buscaInput class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
           <button class="btn btn-azul" type="submit">Buscar</button>
         </form>
+        
         <nav>
           <ul class="nav">
             <!-- <li class="nav-item">
