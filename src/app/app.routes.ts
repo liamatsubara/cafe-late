@@ -7,6 +7,6 @@ import { CadastroComponent } from './paginas/cadastro/cadastro.component';
 export const routes: Routes = [
     {path:"", component:VitrineComponent},
     {path:"login", component:LoginComponent},
-    {path:"detalhe/:id", component:DetalheComponent}
+    {path:"detalhe/:id", component:DetalheComponent},
     {path:"cadastro", component:CadastroComponent}
 ];
