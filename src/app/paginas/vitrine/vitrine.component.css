@@ -9,17 +9,17 @@ h2 {
     color: white;
     background-color: #648C85;
 }
-  
+
 .row {
     justify-content: center;
 }
-  
+
 
 app-cartao-produto {
     display: flex;
     justify-content: center;
 }
-  
+
 
 @media (min-width: 768px) {
     .col-md-4 {
@@ -27,4 +27,29 @@ app-cartao-produto {
         justify-content: center;
     }
 }
-  
+
+.img-banner {
+    width: 100%;
+}
+
+.green-bar {
+    background-color: #648C85;
+    padding: 1px;
+    margin-bottom: 50px;
+}
+
+/* Oculta o banner mobile por padrão */
+.mobile-banner {
+    display: none;
+}
+
+/* Exibe o banner mobile em telas menores que 768px */
+@media (max-width: 768px) {
+    .desktop-banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+    }
+}

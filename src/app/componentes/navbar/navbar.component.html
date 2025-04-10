@@ -1,30 +1,29 @@
-  <!-- NAVBAR -->
-  <div class="bg-caramelo">
-    <div class="container">
-      <header class="d-flex justify-content-between align-items-center">
-        <div class="">
-          <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="" class="logo-navbar">
-          <h4 class="d-inline-block align-text-top font-logo">Café Late</h4>
-        </div>
-        <form class="d-flex" role="search" (submit)="buscarProduto($event, buscaInput)">
-          <input #buscaInput class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
-          <button class="btn btn-azul" type="submit">Buscar</button>
-        </form>
-        
-        <nav>
-          <ul class="nav">
-            <!-- <li class="nav-item">
-              <a class="nav-link text-white" href="#">Produtos</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link text-white" [routerLink]="['/carrinho']">Carrinho</a>
+<!-- NAVBAR -->
+<div class="bg-caramelo">
+  <div class="container">
+    <header class="d-flex justify-content-between align-items-center">
+      <a [routerLink]="['/']" class="d-flex align-items-center text-decoration-none">
+        <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168"
+          alt="Logo Café Late" class="logo-navbar">
+        <h4 class="d-inline-block align-text-top font-logo ms-2 text-white mb-0">Café Late</h4>
+      </a>
 
-            </li>
-            <li class="nav-item">
-              <a href="/cadastro/" class="nav-link text-white" >Cadastro</a>
-            </li>
-          </ul>
-        </nav>  
-      </header>
-    </div>
+      <form class="d-flex" role="search" (submit)="buscarProduto($event, buscaInput)">
+        <input #buscaInput class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
+        <button class="btn btn-azul" type="submit">Buscar</button>
+      </form>
+
+      <nav>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" [routerLink]="['/carrinho']">Carrinho</a>
+
+          </li>
+          <li class="nav-item">
+            <a href="/cadastro/" class="nav-link text-white">Cadastro</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </div>
+</div>
