@@ -1,0 +1,119 @@
+.cadastro-container {
+    background-color: #fef5ee;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+.cadastro-card {
+    display: flex;
+    max-width: 850px;
+    width: 95%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cadastro-left {
+    background-color: #3D2920;
+    color: white;
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cadastro-left h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 15px;
+}
+
+.form-cadastro .form-label {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.form-cadastro .form-control {
+    border-radius: 6px;
+    border: none;
+    padding: 0.5rem;
+}
+
+.btn-cadastrar {
+    background-color: #648C85;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-cadastrar:hover {
+    opacity: 0.9;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro-right {
+    width: 50%;
+    height: auto;
+}
+
+.cadastro-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.label-fixa {
+    width: 100px;
+    margin-right: 1rem;
+    text-align: right;
+}
+  
+.flex-fill {
+    flex: 1;
+}
+  
+
+@media (max-width: 767px) {
+    .cadastro-card {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .cadastro-left,
+    .cadastro-right {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .cadastro-left {
+        padding: 1.5rem;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .cadastro-right {
+        border-radius: 0 0 12px 12px;
+        height: 240px;
+    }
+
+    .cadastro-right img {
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+  
