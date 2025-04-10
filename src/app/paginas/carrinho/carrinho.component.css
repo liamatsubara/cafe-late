@@ -1,0 +1,9 @@
+.tabela-carrinho {
+    background-color: #FFF6EF;
+}
+
+
+.tabela-carrinho th,
+.tabela-carrinho td {
+    background-color: #FFF6EF !important;
+}

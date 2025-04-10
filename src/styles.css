@@ -13,6 +13,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: #FFF6EF;
   }
   
   body {
