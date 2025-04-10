@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="login-container">
+    <div class="login-card d-flex shadow rounded overflow-hidden">
+      <div class="login-left text-white p-4 d-flex flex-column justify-content-between">
+        <div>
+          <h2 class="text-center mb-4">Já tenho cadastro</h2>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <a href="#" class="text-white small">Esqueci minha senha</a>
+              <button type="submit" class="btn btn-login">Entrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="login-right text-white p-4 d-flex flex-column align-items-center justify-content-center">
+        <h2 class="text-center mb-4">Ainda não tenho cadastro</h2>
+        <button class="btn btn-login mb-4">Cadastrar</button>
+        <img src="assets/dog-icon.png" alt="Cachorro" class="dog-icon" />
+      </div>
+    </div>
+  </div>  
