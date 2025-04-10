@@ -1,0 +1,53 @@
+.login-container {
+    background-color: #fef5ee;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.login-card {
+    width: 720px;
+    height: 360px;
+    border-radius: 12px;
+}
+  
+
+.login-left {
+    background-color: #3D2920;
+    width: 50%;
+    border-radius: 12px 0 0 12px;
+    font-family: 'Georgia', serif;
+}
+
+.login-right {
+    background-color: #A1896E;
+    width: 50%;
+    border-radius: 0 12px 12px 0;
+    font-family: 'Georgia', serif;
+}
+
+.btn-login {
+    background-color: #648C85;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+  
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+.dog-icon {
+    width: 64px;
+    height: 64px;
+}
+  
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+} 
