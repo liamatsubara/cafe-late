@@ -1,26 +1,36 @@
-<!-- NAVBAR -->
 <div class="bg-caramelo">
   <div class="container">
-    <header class="d-flex justify-content-between align-items-center">
-      <a [routerLink]="['/']" class="d-flex align-items-center text-decoration-none">
-        <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168"
-          alt="Logo Café Late" class="logo-navbar">
-        <h4 class="d-inline-block align-text-top font-logo ms-2 text-white mb-0">Café Late</h4>
-      </a>
-
-      <form class="d-flex" role="search" (submit)="buscarProduto($event, buscaInput)">
-        <input #buscaInput class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
+    <header class="d-flex justify-content-between align-items-center flex-wrap py-3 position-relative">
+      <div class="popover-menu" *ngIf="menuAberto">
+        <a class="d-block text-white py-2" href="#">Carrinho</a>
+        <a class="d-block text-white py-2" routerLink="/cadastro">Cadastro</a>
+        <form class="d-flex mx-md-4 my-3 my-md-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
+          <button class="btn btn-azul" type="submit">Buscar</button>
+        </form>
+      </div>
+      <div class="mobile d-flex align-items-center gap-2">
+        <div class="d-md d-flex align-items-center">
+          <button (click)="toggleMenu()" class="btn text-white fs-2 border-0" aria-label="Abrir menu">
+            ☰
+          </button>
+          <div class="d-flex align-items-center">
+            <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="" class="logo-navbar">
+            <h4 class="d-inline-block align-text-top font-logo">Café Late</h4>
+          </div>
+        </div>
+      </div>
+      <form class="d-flex align-items-center d-none mx-md-4 my-3 my-md-0" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
         <button class="btn btn-azul" type="submit">Buscar</button>
       </form>
-
-      <nav>
-        <ul class="nav">
+      <nav class="menu-mobile d-md-block d-none" id="menu-links">
+        <ul class="nav flex-column flex-md-row">
           <li class="nav-item">
-            <a class="nav-link text-white" [routerLink]="['/carrinho']">Carrinho</a>
-
+            <a href="#" class="nav-link text-white">Carrinho</a>
           </li>
           <li class="nav-item">
-            <a href="/cadastro/" class="nav-link text-white">Cadastro</a>
+            <a href="/cadastro/" class="nav-link text-white">Login</a>
           </li>
         </ul>
       </nav>

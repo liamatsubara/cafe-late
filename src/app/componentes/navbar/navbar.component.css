@@ -1,0 +1,52 @@
+.font-logo {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .popover-menu form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .popover-menu input {
+        width: 100%;
+    }
+
+    .btn-azul {
+        width: 100%;
+    }
+
+    .popover-menu a {
+        text-align: center;
+    }
+
+    .popover-menu {
+        position: absolute;
+        top: 100%;
+        left: -14px; /* gambiarra */
+        width: 107%; /* gambiarra */
+        background-color: #bc8950;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        z-index: 1000;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+}
+  
