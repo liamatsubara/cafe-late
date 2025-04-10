@@ -4,6 +4,7 @@ import { DetalheComponent } from './paginas/detalhe/detalhe.component';
 import { LoginComponent } from './paginas/login/login.component';
 import { CadastroComponent } from './paginas/cadastro/cadastro.component';
 import { BuscaComponent } from './paginas/busca/busca.component';
+import { CarrinhoComponent } from './paginas/carrinho/carrinho.component';
 
 export const routes: Routes = [
     {path:"", component:VitrineComponent},
@@ -11,4 +12,6 @@ export const routes: Routes = [
     {path:"detalhe/:id", component:DetalheComponent},
     {path:"cadastro", component:CadastroComponent},
     { path: 'busca', component: BuscaComponent },
+    { path: 'carrinho', component: CarrinhoComponent },
+
 ];
