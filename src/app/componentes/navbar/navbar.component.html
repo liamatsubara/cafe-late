@@ -1,30 +1,32 @@
 <div class="bg-caramelo">
-  <div class="container">
+  <div class="container-fluid">
     <header class="d-flex justify-content-between align-items-center flex-wrap py-3 position-relative">
-      <div class="mobile d-flex align-items-center gap-2">
-        <div class="d-md-none d-flex align-items-center">
-          <div class="popover-menu" *ngIf="menuAberto">
-            <a class="d-block text-white py-2" href="#">Carrinho</a>
-            <a class="d-block text-white py-2" routerLink="/cadastro">Cadastro</a>
-            
-            <form class="d-flex mx-md-4 my-3 my-md-0" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
-              <button class="btn btn-azul" type="submit">Buscar</button>
-            </form>
-          </div>
+      <div class="popover-menu" *ngIf="menuAberto">
+        <a class="d-block text-white py-2" href="#">Carrinho</a>
+        <a class="d-block text-white py-2" routerLink="/cadastro">Cadastro</a>
+        <form class="d-flex flex-column gap-2 my-3 w-100" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
+          <button class="btn btn-azul" type="submit">Buscar</button>
+        </form>
+      </div>
+      <div class="d-flex align-items-center gap-3 middle">
+        <div class="d-md-none">
           <button (click)="toggleMenu()" class="btn text-white fs-2 border-0" aria-label="Abrir menu">
             ☰
           </button>
         </div>
+
         <div class="d-flex align-items-center">
           <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="" class="logo-navbar">
           <h4 class="d-inline-block align-text-top font-logo">Café Late</h4>
         </div>
       </div>
+
       <form class="d-flex align-items-center d-none mx-md-4 my-3 my-md-0" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar Produto..." aria-label="Search">
         <button class="btn btn-azul" type="submit">Buscar</button>
       </form>
+
       <nav class="menu-mobile d-md-block d-none" id="menu-links">
         <ul class="nav flex-column flex-md-row">
           <li class="nav-item">

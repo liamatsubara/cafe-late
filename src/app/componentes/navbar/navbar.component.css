@@ -5,47 +5,38 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .popover-menu form {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .popover-menu input {
-        width: 100%;
-    }
-
-    .btn-azul {
-        width: 100%;
-    }
-
-    .popover-menu a {
-        text-align: center;
-    }
-
+   @media (max-width: 768px) {
     .popover-menu {
-        position: absolute;
-        top: 9vh;
-        left: -120px;
-        width: 100%;
-        background-color: #bc8950;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        border-radius: 0 0 12px 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      }
-}
+      position: absolute;
+      top: calc(100%);
+      left: -12px;
+      right: 0;
+      width: 100vw;
+      background-color: #bc8950;
+      padding: 1rem 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      font-family: 'Playfair Display', serif;
+    }
   
+    .popover-menu a {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .popover-menu form input,
+    .popover-menu form button {
+      width: 100%;
+    }
+  
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
