@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from '../../service/produto.service';
@@ -13,11 +13,24 @@ import { TopBarComponent } from "../../componentes/top-bar/top-bar.component";
   templateUrl: './busca.component.html',
   styleUrl: './busca.component.css'
 })
-export class BuscaComponent {
+export class BuscaComponent implements OnInit{
   produtosFiltrados: Produto[] = [];
   termoBusca: string = '';
 
-  constructor(private route: ActivatedRoute, private produtoService: ProdutoService) {
+  // constructor(private route: ActivatedRoute, private produtoService: ProdutoService) {
+  //   this.route.queryParams.subscribe(params => {
+  //     this.termoBusca = (params['q'] || '').toLowerCase();
+
+  //     const todosProdutos = this.produtoService.listar();
+  //     this.produtosFiltrados = todosProdutos.filter(produto =>
+  //       produto.nome.toLowerCase().includes(this.termoBusca) ||
+  //       produto.descricao.toLowerCase().includes(this.termoBusca)
+  //     );
+  //   });
+  // }
+  constructor(private route: ActivatedRoute, private produtoService: ProdutoService) {}
+
+  ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.termoBusca = (params['q'] || '').toLowerCase();
 
@@ -28,5 +41,6 @@ export class BuscaComponent {
       );
     });
   }
+
 }
 
