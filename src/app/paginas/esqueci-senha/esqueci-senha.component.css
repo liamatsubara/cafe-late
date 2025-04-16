@@ -5,21 +5,21 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FBF6F0; /* Ajuste conforme necessário */
+    background-color: #FBF6F0;
 }
 
 .container {
-    background-color: #3B2A23; /* Tom de marrom; ajuste conforme necessário */
-    width: 400px;             /* Largura fixa do painel */
-    margin: 8% auto;          /* Centraliza vertical/horizontal */
-    padding: 2rem;            /* Espaçamento interno */
-    border-radius: 8px;       /* Cantos arredondados suaves */
-    text-align: center;       /* Alinha textos/botões ao centro */
+    background-color: #3B2A23; 
+    width: 400px;
+    margin: 8% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
 }
 
-.container h1 {
+label {
     color: #FFF;
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -31,6 +31,8 @@ body {
     border: none;
     border-radius: 4px;
     margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem auto;
+    display: block;
 }
 
 .container input::placeholder {
@@ -38,8 +40,7 @@ body {
 }
 
 .container button {
-    background-color: #6D8370; /* Tom de verde; ajuste conforme necessário */
-    color: #FFF;
+    background-color: #648C85;
     font-size: 1rem;
     padding: 0.75rem 2rem;
     border: none;

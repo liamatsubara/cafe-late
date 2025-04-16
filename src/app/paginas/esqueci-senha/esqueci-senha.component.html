@@ -1,6 +1,8 @@
 <app-top-bar title="Esqueci a Senha"></app-top-bar>
 <div class="container">
-    <h1>Informe seu email</h1>
-    <input type="email" placeholder="Informe seu email para recuperar sua senha"/>
-    <button>Recuperar</button>
+    <form (ngSubmit)="enviarEmail()">
+        <label for="email">Digite seu email</label>
+        <input type="email" [(ngModel)]="email" name="email" type="email" class="form-control" required/>
+        <button type="submit" class="btn-azul">Recuperar</button>
+    </form>
 </div>
