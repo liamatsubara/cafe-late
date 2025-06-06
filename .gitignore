@@ -1,36 +1,69 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# =======================
+# IDEs and Editors
+# =======================
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-**/node_modules
-/node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
+### IntelliJ IDEA ###
 .idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+*.iws
+*.iml
+*.ipr
 
-# Visual Studio Code
-.vscode/*
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### VS Code ###
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
 
-# Miscellaneous
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# =======================
+# Build Output
+# =======================
+build/
+target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# =======================
+# Node / JavaScript
+# =======================
+node_modules/
+**/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular / Frontend
+/dist
+/tmp
+/out-tsc
 /.angular/cache
+
+# =======================
+# Miscellaneous
+# =======================
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+.c9/
+*.launch
+*.sublime-workspace
+.history/*
 .sass-cache/
 /connect.lock
 /coverage
@@ -38,6 +71,8 @@ yarn-error.log
 testem.log
 /typings
 
-# System files
+# =======================
+# System Files
+# =======================
 .DS_Store
 Thumbs.db
