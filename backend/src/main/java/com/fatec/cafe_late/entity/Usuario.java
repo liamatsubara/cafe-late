@@ -1,20 +1,24 @@
 package com.fatec.cafe_late.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuario")
 public class Usuario {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String nome;
     private String email;
     private String senha;
     private String cpf;
     private String telefone;
 
-    public Usuario(int id, String nome, String email, String senha, String cpf, String telefone) {
+    public Usuario() {}
+
+    public Usuario(Long id, String nome, String email, String senha, String cpf, String telefone) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -23,11 +27,11 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
