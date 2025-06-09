@@ -7,14 +7,18 @@ import jakarta.persistence.Table;
 @Table(name = "usuario")
 public class Usuario {
 
-    private int id;
+    private Long id;
     private String nome;
     private String email;
     private String senha;
     private String cpf;
     private String telefone;
 
-    public Usuario(int id, String nome, String email, String senha, String cpf, String telefone) {
+    public Usuario() {
+
+    }
+
+    public Usuario(Long id, String nome, String email, String senha, String cpf, String telefone) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -23,11 +27,11 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
