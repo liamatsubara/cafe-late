@@ -1,13 +1,15 @@
 package com.fatec.cafe_late.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "perfilSensorial")
 public class PerfilSensorial {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
     private String variedade;
     private String processo;
     private String altitude;
@@ -17,7 +19,9 @@ public class PerfilSensorial {
     private String docura;
     private String idealPara;
 
-    public PerfilSensorial(int id, String variedade, String processo, String altitude, String torra, String corpo, String acidez, String docura, String idealPara) {
+    public PerfilSensorial() {}
+
+    public PerfilSensorial(Long id, String variedade, String processo, String altitude, String torra, String corpo, String acidez, String docura, String idealPara) {
         this.id = id;
         this.variedade = variedade;
         this.processo = processo;
@@ -29,11 +33,11 @@ public class PerfilSensorial {
         this.idealPara = idealPara;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
