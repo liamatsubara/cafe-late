@@ -1,61 +1,61 @@
 {
-  "hash": "c786b4f3",
-  "configHash": "460d2f30",
-  "lockfileHash": "80ad4621",
-  "browserHash": "1fa033cb",
+  "hash": "ae5b2095",
+  "configHash": "37159b16",
+  "lockfileHash": "e0142a48",
+  "browserHash": "4710d217",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "2f3ae5bc",
+      "fileHash": "3a14a63f",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "05f28737",
+      "fileHash": "cf75fc01",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "803dbb68",
+      "fileHash": "64af0f5c",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "354264bf",
+      "fileHash": "496dd98a",
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
-      "fileHash": "3797b347",
+      "fileHash": "96d84ea4",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "59f578c8",
+      "fileHash": "5b403d36",
       "needsInterop": false
     },
     "@angular/ssr": {
       "src": "../../../../../../node_modules/@angular/ssr/fesm2022/ssr.mjs",
       "file": "@angular_ssr.js",
-      "fileHash": "41b6b134",
+      "fileHash": "d1742a99",
       "needsInterop": false
     },
     "@angular/ssr/node": {
       "src": "../../../../../../node_modules/@angular/ssr/fesm2022/node.mjs",
       "file": "@angular_ssr_node.js",
-      "fileHash": "d75e9a8a",
+      "fileHash": "eb2b3c48",
       "needsInterop": false
     },
     "express": {
       "src": "../../../../../../node_modules/express/index.js",
       "file": "express.js",
-      "fileHash": "36c2f6ab",
+      "fileHash": "54cfb9a3",
       "needsInterop": true
     }
   },

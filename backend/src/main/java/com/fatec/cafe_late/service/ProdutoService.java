@@ -1,4 +1,4 @@
 package com.fatec.cafe_late.service;
 
-public class ProductService {
+public class ProdutoService {
 }

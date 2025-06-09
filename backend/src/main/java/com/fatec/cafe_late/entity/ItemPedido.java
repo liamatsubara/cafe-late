@@ -1,4 +1,4 @@
 package com.fatec.cafe_late.entity;
 
-public class DeliveryAddress {
+public class ItemPedido {
 }

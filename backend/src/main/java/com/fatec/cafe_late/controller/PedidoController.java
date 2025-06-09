@@ -1,4 +1,4 @@
 package com.fatec.cafe_late.controller;
 
-public class UserController {
+public class PedidoController {
 }
