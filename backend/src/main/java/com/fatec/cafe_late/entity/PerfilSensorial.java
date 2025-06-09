@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class PerfilSensorial {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String variedade;
@@ -19,8 +19,7 @@ public class PerfilSensorial {
     private String docura;
     private String idealPara;
 
-    public PerfilSensorial() {
-    }
+    public PerfilSensorial() {}
 
     public PerfilSensorial(Long id, String variedade, String processo, String altitude, String torra, String corpo, String acidez, String docura, String idealPara) {
         this.id = id;
