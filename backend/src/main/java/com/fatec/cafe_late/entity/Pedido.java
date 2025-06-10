@@ -42,4 +42,22 @@ public class Pedido {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public double calcularValorTotal() {
+        if (itens == null) return 0.0;
+
+        return itens.stream()
+                .mapToDouble(item -> {
+                    Produto produto = item.getProduto();
+                    Double preco = produto != null ? produto.getPreco() : null;
+                    Long quantidade = item.getQuantidade();
+
+                    if (preco == null || quantidade == null) {
+                        return 0.0;
+                    }
+
+                    return preco * quantidade;
+                })
+                .sum();
+    }
 }
