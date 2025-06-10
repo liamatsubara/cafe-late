@@ -24,7 +24,7 @@ public class PedidoService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public Pedido criar(Pedido pedido) throws Exception {
+    public Pedido criarPedido(Pedido pedido) throws Exception {
         validarUsuario(pedido.getUsuario());
         validarItens(pedido.getItens());
 
@@ -73,11 +73,17 @@ public class PedidoService {
         return pedidoRepository.findAll();
     }
 
-    public Pedido atualizar(Pedido pedido) {
+    public Pedido atualizar(Pedido pedido) throws Exception {
+        if (!pedidoRepository.existsById(pedido.getId())) {
+            throw new Exception("Pedido com ID " + pedido.getId() + " não encontrado.");
+        }
         return pedidoRepository.save(pedido);
     }
 
-    public void deletar(Long id) {
+    public void deletar(Long id) throws Exception {
+        if (!pedidoRepository.existsById(id)) {
+            throw new Exception("Pedido com ID " + id + " não encontrado.");
+        }
         pedidoRepository.deleteById(id);
     }
 }
