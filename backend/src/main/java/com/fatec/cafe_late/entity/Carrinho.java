@@ -5,19 +5,19 @@ import java.util.List;
 
 @Entity
 @Table(name = "pedido")
-public class Pedido {
+public class Carrinho {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
-    private List<ItemPedido> itens;
+    private List<ItemCarrinho> itens;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    public Pedido() {}
+    public Carrinho() {}
 
     public Long getId() {
         return id;
@@ -27,11 +27,11 @@ public class Pedido {
         this.id = id;
     }
 
-    public List<ItemPedido> getItens() {
+    public List<ItemCarrinho> getItens() {
         return itens;
     }
 
-    public void setItens(List<ItemPedido> itens) {
+    public void setItens(List<ItemCarrinho> itens) {
         this.itens = itens;
     }
 

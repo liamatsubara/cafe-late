@@ -1,6 +1,6 @@
 package com.fatec.cafe_late.repository;
 
-import com.fatec.cafe_late.entity.Pedido;
+import com.fatec.cafe_late.entity.Carrinho;
 import org.springframework.data.jpa.repository.JpaRepository;
-public interface PedidoRepository extends JpaRepository<Pedido, Long> {
+public interface PedidoRepository extends JpaRepository<Carrinho, Long> {
 }

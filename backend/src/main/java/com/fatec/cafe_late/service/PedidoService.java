@@ -1,7 +1,7 @@
 package com.fatec.cafe_late.service;
 
-import com.fatec.cafe_late.entity.ItemPedido;
-import com.fatec.cafe_late.entity.Pedido;
+import com.fatec.cafe_late.entity.ItemCarrinho;
+import com.fatec.cafe_late.entity.Carrinho;
 import com.fatec.cafe_late.entity.Produto;
 import com.fatec.cafe_late.entity.Usuario;
 import com.fatec.cafe_late.repository.PedidoRepository;
@@ -24,15 +24,15 @@ public class PedidoService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public Pedido criarPedido(Pedido pedido) throws Exception {
-        validarUsuario(pedido.getUsuario());
-        validarItens(pedido.getItens());
+    public Carrinho criarPedido(Carrinho carrinho) throws Exception {
+        validarUsuario(carrinho.getUsuario());
+        validarItens(carrinho.getItens());
 
-        for (ItemPedido item : pedido.getItens()) {
-            item.setPedido(pedido);
+        for (ItemCarrinho item : carrinho.getItens()) {
+            item.setPedido(carrinho);
         }
 
-        return pedidoRepository.save(pedido);
+        return pedidoRepository.save(carrinho);
     }
 
     private void validarUsuario(Usuario usuario)  throws Exception{
@@ -46,12 +46,12 @@ public class PedidoService {
         }
     }
 
-    private void validarItens(List<ItemPedido> itens) throws Exception{
+    private void validarItens(List<ItemCarrinho> itens) throws Exception{
         if (itens == null || itens.isEmpty()) {
             throw new Exception("O pedido deve conter ao menos um item.");
         }
 
-        for (ItemPedido item : itens) {
+        for (ItemCarrinho item : itens) {
             if (item.getProduto() == null || item.getProduto().getId() == null) {
                 throw new Exception("Produto do item do pedido é obrigatório.");
             }
@@ -65,19 +65,19 @@ public class PedidoService {
         }
     }
 
-    public Pedido obterPedido(Long id) {
+    public Carrinho obterPedido(Long id) {
         return pedidoRepository.findById(id).orElseThrow(() -> new RuntimeException("Pedido com id: " + id + " não encontrado!"));
     }
 
-    public List<Pedido> obterPedidos() {
+    public List<Carrinho> obterPedidos() {
         return pedidoRepository.findAll();
     }
 
-    public Pedido atualizar(Pedido pedido) throws Exception {
-        if (!pedidoRepository.existsById(pedido.getId())) {
-            throw new Exception("Pedido com ID " + pedido.getId() + " não encontrado.");
+    public Carrinho atualizar(Carrinho carrinho) throws Exception {
+        if (!pedidoRepository.existsById(carrinho.getId())) {
+            throw new Exception("Pedido com ID " + carrinho.getId() + " não encontrado.");
         }
-        return pedidoRepository.save(pedido);
+        return pedidoRepository.save(carrinho);
     }
 
     public void deletar(Long id) throws Exception {

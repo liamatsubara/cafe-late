@@ -1,6 +1,6 @@
 package com.fatec.cafe_late.controller;
 
-import com.fatec.cafe_late.entity.Pedido;
+import com.fatec.cafe_late.entity.Carrinho;
 import com.fatec.cafe_late.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +17,9 @@ public class PedidoController {
     private PedidoService pedidoService;
 
     @PostMapping
-    public ResponseEntity<Void> criaPedido(@RequestBody Pedido pedido) {
+    public ResponseEntity<Void> criaPedido(@RequestBody Carrinho carrinho) {
         try {
-            pedidoService.criarPedido(pedido);
+            pedidoService.criarPedido(carrinho);
             return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
@@ -27,25 +27,25 @@ public class PedidoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pedido> obterPedidoPorId(@PathVariable Long id) {
-        Pedido pedido = pedidoService.obterPedido(id);
-        if (pedido != null) {
-            return ResponseEntity.ok(pedido);
+    public ResponseEntity<Carrinho> obterPedidoPorId(@PathVariable Long id) {
+        Carrinho carrinho = pedidoService.obterPedido(id);
+        if (carrinho != null) {
+            return ResponseEntity.ok(carrinho);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
     @GetMapping
-    public ResponseEntity<List<Pedido>> obterPedidos() {
-        List<Pedido> pedidos = pedidoService.obterPedidos();
-        return ResponseEntity.ok(pedidos);
+    public ResponseEntity<List<Carrinho>> obterPedidos() {
+        List<Carrinho> carrinhos = pedidoService.obterPedidos();
+        return ResponseEntity.ok(carrinhos);
     }
 
     @PutMapping
-    public ResponseEntity<Pedido> atualizarPedido(@RequestBody Pedido pedido) {
+    public ResponseEntity<Carrinho> atualizarPedido(@RequestBody Carrinho carrinho) {
         try {
-            Pedido atualizado = pedidoService.atualizar(pedido);
+            Carrinho atualizado = pedidoService.atualizar(carrinho);
             return ResponseEntity.ok(atualizado);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();

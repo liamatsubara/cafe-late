@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/api/produtos")
 @CrossOrigin(origins = "http://localhost:4200")
 public class ProdutoController {
 
     @Autowired
     ProdutoService produtoService;
 
-    @PostMapping()
+    @PostMapping
     public ResponseEntity<Produto> cadastrar(@RequestBody Produto produto){
         Produto novoProduto = produtoService.cadastrar(produto);
         return ResponseEntity.ok(novoProduto);
@@ -48,5 +48,4 @@ public class ProdutoController {
         produtoService.deletarProduto(id);
         return ResponseEntity.noContent().build();
     }
-
 }

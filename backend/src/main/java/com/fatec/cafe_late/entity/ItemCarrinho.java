@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "item_pedido")
-public class ItemPedido {
+public class ItemCarrinho {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -18,11 +18,11 @@ public class ItemPedido {
 
     @ManyToOne
     @JoinColumn(name = "pedido_id")
-    private Pedido pedido;
+    private Carrinho carrinho;
 
-    public ItemPedido() {}
+    public ItemCarrinho() {}
 
-    public ItemPedido(Long id, Long quantidade, Produto produto) {
+    public ItemCarrinho(Long id, Long quantidade, Produto produto) {
         this.id = id;
         this.quantidade = quantidade;
         this.produto = produto;
@@ -52,11 +52,11 @@ public class ItemPedido {
         this.produto = produto;
     }
 
-    public Pedido getPedido() {
-        return pedido;
+    public Carrinho getPedido() {
+        return carrinho;
     }
 
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
+    public void setPedido(Carrinho carrinho) {
+        this.carrinho = carrinho;
     }
 }
