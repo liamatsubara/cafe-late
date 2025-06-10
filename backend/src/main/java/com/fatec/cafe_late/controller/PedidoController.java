@@ -3,39 +3,61 @@ package com.fatec.cafe_late.controller;
 import com.fatec.cafe_late.entity.Pedido;
 import com.fatec.cafe_late.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/pedidos/")
+@RequestMapping("/api/pedidos")
 public class PedidoController {
 
     @Autowired
     private PedidoService pedidoService;
 
     @PostMapping
-    public Pedido criaPedido(@RequestBody Pedido pedido) throws Exception {
-        return pedidoService.criar(pedido);
+    public ResponseEntity<Pedido> criaPedido(@RequestBody Pedido pedido) {
+        try {
+            Pedido criado = pedidoService.criarPedido(pedido);
+            return ResponseEntity.status(200).body(criado);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
-    @GetMapping("{id}")
-    public Pedido obterPedidoPorId(@PathVariable Long id) {
-        return pedidoService.obterPedido(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<Pedido> obterPedidoPorId(@PathVariable Long id) {
+        Pedido pedido = pedidoService.obterPedido(id);
+        if (pedido != null) {
+            return ResponseEntity.ok(pedido);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping
-    public List<Pedido> obterPedidos() {
-        return pedidoService.obterPedidos();
+    public ResponseEntity<List<Pedido>> obterPedidos() {
+        List<Pedido> pedidos = pedidoService.obterPedidos();
+        return ResponseEntity.ok(pedidos);
     }
 
     @PutMapping
-    public Pedido atualizarPedido(Pedido pedido) {
-        return pedidoService.atualizar(pedido);
+    public ResponseEntity<Pedido> atualizarPedido(@RequestBody Pedido pedido) {
+        try {
+            Pedido atualizado = pedidoService.atualizar(pedido);
+            return ResponseEntity.ok(atualizado);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
-    @DeleteMapping
-    public void deletePedido(Long id) {
-        pedidoService.deletar(id);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePedido(@PathVariable Long id) {
+        try {
+            pedidoService.deletar(id);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 }
