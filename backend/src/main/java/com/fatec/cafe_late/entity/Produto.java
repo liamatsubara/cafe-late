@@ -8,7 +8,7 @@ public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String nome;
     private double preco;
     private String imagem;
@@ -19,7 +19,9 @@ public class Produto {
     @OneToOne
     private PerfilSensorial perfilSensorial;
 
-    public Produto(int id, String nome, double preco, String imagem, String origem, String descricao, String peso, PerfilSensorial perfilSensorial) {
+    public Produto() {}
+
+    public Produto(Long id, String nome, double preco, String imagem, String origem, String descricao, String peso, PerfilSensorial perfilSensorial) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -30,11 +32,11 @@ public class Produto {
         this.perfilSensorial = perfilSensorial;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
