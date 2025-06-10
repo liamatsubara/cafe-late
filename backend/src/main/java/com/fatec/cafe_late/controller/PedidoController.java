@@ -15,7 +15,7 @@ public class PedidoController {
     private PedidoService pedidoService;
 
     @PostMapping
-    public Pedido criaPedido(@RequestBody Pedido pedido) {
+    public Pedido criaPedido(@RequestBody Pedido pedido) throws Exception {
         return pedidoService.criar(pedido);
     }
 
