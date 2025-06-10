@@ -17,10 +17,10 @@ public class PedidoController {
     private PedidoService pedidoService;
 
     @PostMapping
-    public ResponseEntity<Pedido> criaPedido(@RequestBody Pedido pedido) {
+    public ResponseEntity<Void> criaPedido(@RequestBody Pedido pedido) {
         try {
-            Pedido criado = pedidoService.criarPedido(pedido);
-            return ResponseEntity.status(200).body(criado);
+            pedidoService.criarPedido(pedido);
+            return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
