@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Produto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String nome;
     private double preco;
@@ -16,7 +16,8 @@ public class Produto {
     private String descricao;
     private String peso;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "perfil_sensorial_id", referencedColumnName = "id")
     private PerfilSensorial perfilSensorial;
 
     public Produto(){}
