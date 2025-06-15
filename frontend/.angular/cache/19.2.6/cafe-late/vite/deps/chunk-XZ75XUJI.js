@@ -1,7 +1,9 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   InjectionToken
-} from "./chunk-AYIISLBR.js";
+} from "./chunk-YCA54VN2.js";
+
+// node_modules/@angular/common/fesm2022/dom_tokens-CNpAxedO.mjs
+var DOCUMENT = new InjectionToken(ngDevMode ? "DocumentToken" : "");
 
 // node_modules/@angular/common/fesm2022/xhr-BdgfMvBr.mjs
 function parseCookieValue(cookieStr, name) {
@@ -26,26 +28,16 @@ function isPlatformServer(platformId) {
 var XhrFactory = class {
 };
 
-// node_modules/@angular/common/fesm2022/dom_tokens-CNpAxedO.mjs
-var DOCUMENT = new InjectionToken(ngDevMode ? "DocumentToken" : "");
-
 export {
+  DOCUMENT,
   parseCookieValue,
   PLATFORM_BROWSER_ID,
   PLATFORM_SERVER_ID,
   isPlatformBrowser,
   isPlatformServer,
-  XhrFactory,
-  DOCUMENT
+  XhrFactory
 };
 /*! Bundled license information:
-
-@angular/common/fesm2022/xhr-BdgfMvBr.mjs:
-  (**
-   * @license Angular v19.2.5
-   * (c) 2010-2025 Google LLC. https://angular.io/
-   * License: MIT
-   *)
 
 @angular/common/fesm2022/dom_tokens-CNpAxedO.mjs:
   (**
@@ -53,5 +45,12 @@ export {
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
+
+@angular/common/fesm2022/xhr-BdgfMvBr.mjs:
+  (**
+   * @license Angular v19.2.5
+   * (c) 2010-2025 Google LLC. https://angular.io/
+   * License: MIT
+   *)
 */
-//# sourceMappingURL=chunk-OKHGTVRB.js.map
+//# sourceMappingURL=chunk-XZ75XUJI.js.map
