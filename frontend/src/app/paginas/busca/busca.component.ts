@@ -17,30 +17,18 @@ export class BuscaComponent implements OnInit{
   produtosFiltrados: Produto[] = [];
   termoBusca: string = '';
 
-  // constructor(private route: ActivatedRoute, private produtoService: ProdutoService) {
-  //   this.route.queryParams.subscribe(params => {
-  //     this.termoBusca = (params['q'] || '').toLowerCase();
-
-  //     const todosProdutos = this.produtoService.listar();
-  //     this.produtosFiltrados = todosProdutos.filter(produto =>
-  //       produto.nome.toLowerCase().includes(this.termoBusca) ||
-  //       produto.descricao.toLowerCase().includes(this.termoBusca)
-  //     );
-  //   });
-  // }
   constructor(private route: ActivatedRoute, private produtoService: ProdutoService) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.termoBusca = (params['q'] || '').toLowerCase();
 
-      const todosProdutos = this.produtoService.listar();
-      this.produtosFiltrados = todosProdutos.filter(produto =>
-        produto.nome.toLowerCase().includes(this.termoBusca) ||
-        produto.descricao.toLowerCase().includes(this.termoBusca)
-      );
+      this.produtoService.listar().subscribe((todosProdutos: Produto[]) => {
+        this.produtosFiltrados = todosProdutos.filter((produto: Produto) =>
+          produto.nome.toLowerCase().includes(this.termoBusca) ||
+          produto.descricao.toLowerCase().includes(this.termoBusca)
+        );
+      });
     });
   }
-
 }
-

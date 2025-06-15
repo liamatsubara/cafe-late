@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartaoProdutoComponent } from '../../componentes/cartao-produto/cartao-produto.component';
 import { Produto } from '../../model/produto';
 import { Router } from '@angular/router';
@@ -13,11 +13,14 @@ import { ProdutoService } from '../../service/produto.service';
   styleUrl: './vitrine.component.css'
 })
 
-export class VitrineComponent {
+export class VitrineComponent implements OnInit {
   public produtos: Produto[] = [];
+
   constructor(private produtoService: ProdutoService) {}
 
   ngOnInit(): void {
-    this.produtos = this.produtoService.listar();
+    this.produtoService.listar().subscribe((res: Produto[]) => {
+      this.produtos = res;
+    });
   }
 }
