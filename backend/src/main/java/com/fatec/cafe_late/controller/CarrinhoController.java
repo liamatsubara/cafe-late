@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/pedidos")
+@RequestMapping("/api/carrinho")
 @CrossOrigin(origins = "http://localhost:4200")
-public class PedidoController {
+public class CarrinhoController {
 
     @Autowired
     private PedidoService pedidoService;
