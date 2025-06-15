@@ -1,40 +1,96 @@
 <app-top-bar title="Cadastro"></app-top-bar>
+
 <div class="cadastro-container">
-    <div class="cadastro-card row shadow rounded overflow-hidden">
-      <div class="col-12 col-md-6 cadastro-left p-4 d-flex flex-column justify-content-center">
-        <h2 class="text-center mb-4">Realize seu cadastro</h2>
-        <form>
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label label-fixa">Nome</label>
-            <input type="text" id="nome" class="form-control flex-fill" pattern="^[A-Za-z\s]{6,100}$" placeholder="Digite seu nome" required>
-          </div>
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label label-fixa">Email</label>
-            <input type="email" id="email" class="form-control flex-fill" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Digite seu email" required>
-          </div>
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label label-fixa">Senha</label>
-            <input type="password" id="senha" class="form-control flex-fill" pattern="[A-Za-z0-9{7,12}]" placeholder="Digite sua senha" required>
-          </div>
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label label-fixa">Confirmação de Senha</label>
-            <input type="password" id="conf-senha"  class="form-control flex-fill" pattern="[A-Za-z0-9{7,12}]" placeholder="Confirme sua senha" required>
-          </div>
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label label-fixa">CPF</label>
-            <input type="text" id="cpf" class="form-control flex-fill" pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" placeholder="Digite seu CPF ___.___.___-__" required>
-          </div>
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label label-fixa">Telefone</label>
-            <input type="text" id="telefone" class="form-control flex-fill" pattern="^[0-9]{4,5}-[0-9]{4}$" placeholder="Digite o telefone _____-____" required>
-          </div>
-          <div class="d-flex justify-content-end mt-3">
-            <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
-          </div>
-        </form>
-      </div>
-      <div class="col-12 col-md-6 cadastro-right p-0">
-        <img src="https://drsergiodantas.com.br/wp-content/uploads/2023/10/dr-sergio-dantas-cafe-expresso-e-alzheimer.4-728x1024.jpg.webp" alt="Café" class="img-fluid h-100 w-100">
-      </div>
+  <div class="cadastro-card row shadow rounded overflow-hidden">
+    <div class="col-12 col-md-6 cadastro-left p-4 d-flex flex-column justify-content-center">
+      <h2 class="text-center mb-4">Realize seu cadastro</h2>
+
+      <!-- CHAMADA do método cadastrar() -->
+      <form (ngSubmit)="cadastrar()">
+
+        <!-- Cada campo precisa de [(ngModel)] e name -->
+        <div class="mb-3 d-flex align-items-center">
+          <label class="form-label label-fixa">Nome</label>
+          <input
+            type="text"
+            [(ngModel)]="nome"
+            name="nome"
+            class="form-control flex-fill"
+            pattern="^[A-Za-z\s]{6,100}$"
+            placeholder="Digite seu nome"
+            required />
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <label class="form-label label-fixa">Email</label>
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+            class="form-control flex-fill"
+            placeholder="Digite seu email"
+            required />
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <label class="form-label label-fixa">Senha</label>
+          <input
+            type="password"
+            [(ngModel)]="senha"
+            name="senha"
+            class="form-control flex-fill"
+            pattern=".{7,12}"
+            placeholder="Digite sua senha"
+            required />
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <label class="form-label label-fixa">Confirmação de Senha</label>
+          <input
+            type="password"
+            [(ngModel)]="confirmaSenha"
+            name="confirmaSenha"
+            class="form-control flex-fill"
+            pattern=".{7,12}"
+            placeholder="Confirme sua senha"
+            required />
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <label class="form-label label-fixa">CPF</label>
+          <input
+            type="text"
+            [(ngModel)]="cpf"
+            name="cpf"
+            class="form-control flex-fill"
+            placeholder="Digite seu CPF"
+            required />
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+          <label class="form-label label-fixa">Telefone</label>
+          <input
+            type="text"
+            [(ngModel)]="telefone"
+            name="telefone"
+            class="form-control flex-fill"
+            placeholder="Digite o telefone"
+            required />
+        </div>
+
+        <div class="d-flex justify-content-end mt-3">
+          <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
+        </div>
+      </form>
+
+      <p class="text-danger mt-2">{{ mensagem }}</p>
     </div>
+
+    <div class="col-12 col-md-6 cadastro-right p-0">
+      <img
+        src="https://drsergiodantas.com.br/wp-content/uploads/2023/10/dr-sergio-dantas-cafe-expresso-e-alzheimer.4-728x1024.jpg.webp"
+        alt="Café"
+        class="img-fluid h-100 w-100" />
+    </div>
+  </div>
 </div>

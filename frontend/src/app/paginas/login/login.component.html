@@ -1,29 +1,67 @@
 <app-top-bar title="Login"></app-top-bar>
+
 <div class="login-container">
-    <div class="login-card d-flex shadow rounded overflow-hidden">
-      <div class="login-left text-white p-4 d-flex flex-column justify-content-between">
-        <div>
-          <h2 class="text-center mb-4">Já tenho cadastro</h2>
-          <form (ngSubmit)="fazerLogin()">
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" [(ngModel)]="email" name="email" type="email" class="form-control" placeholder="Digite seu email" required>
+  <div class="login-card d-flex shadow rounded overflow-hidden">
+
+    <div class="login-left text-white p-4 d-flex flex-column justify-content-between">
+      <div>
+        <h2 class="text-center mb-4">Já tenho cadastro</h2>
+
+        <!-- Mensagens de erro e sucesso -->
+        <div *ngIf="mensagemErro" class="alert alert-danger">{{ mensagemErro }}</div>
+        <div *ngIf="mensagemSucesso" class="alert alert-success">{{ mensagemSucesso }}</div>
+
+        <form (ngSubmit)="fazerLogin()" #loginForm="ngForm">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              [(ngModel)]="email"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="Digite seu email"
+              required
+              #emailInput="ngModel"
+            >
+            <!-- Exibe mensagem se email inválido -->
+            <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger small">
+              Por favor, informe um email válido.
             </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Senha</label>
-              <input type="password" id="senha" [(ngModel)]="senha" name="senha" type="password" class="form-control" placeholder="Digite sua senha" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input
+              id="senha"
+              [(ngModel)]="senha"
+              name="senha"
+              type="password"
+              class="form-control"
+              placeholder="Digite sua senha"
+              required
+              #senhaInput="ngModel"
+            >
+            <!-- Exibe mensagem se senha inválida -->
+            <div *ngIf="senhaInput.invalid && senhaInput.touched" class="text-danger small">
+              A senha é obrigatória.
             </div>
-            <div class="d-flex justify-content-between align-items-center mt-4">
-              <a href='/esqueci-senha' class="text-white small">Esqueci minha senha</a>
-              <button type="submit" class="btn btn-login">Entrar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="login-right text-white p-4 d-flex flex-column align-items-center justify-content-center">
-        <h2 class="text-center mb-4">Ainda não tenho cadastro</h2>
-        <a href="/cadastro/" class="btn btn-login mb-4">Cadastrar</a>
-        <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="Cachorro" class="dog-icon" />
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <a href="/esqueci-senha" class="text-white small">Esqueci minha senha</a>
+            <button type="submit" class="btn btn-login" [disabled]="loginForm.invalid">Entrar</button>
+          </div>
+        </form>
+
       </div>
     </div>
-  </div>  
+
+    <div class="login-right text-white p-4 d-flex flex-column align-items-center justify-content-center">
+      <h2 class="text-center mb-4">Ainda não tenho cadastro</h2>
+      <a href="/cadastro/" class="btn btn-login mb-4">Cadastrar</a>
+      <img src="https://ik.imagekit.io/liaMatsubara/Cafe%20Late/oficial.png?updatedAt=1744052006168" alt="Cachorro" class="dog-icon" />
+    </div>
+
+  </div>
+</div>

@@ -77,4 +77,11 @@ h2 {
     .dog-icon {
       margin-top: 1rem;
     }
+
+    .mb-3 .text-danger {
+      min-height: 1.5rem; /* ou ajuste conforme precisar */
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+    }
+
   }
