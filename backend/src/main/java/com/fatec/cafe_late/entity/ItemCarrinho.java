@@ -17,7 +17,7 @@ public class ItemCarrinho {
     private Produto produto;
 
     @ManyToOne
-    @JoinColumn(name = "pedido_id")
+    @JoinColumn(name = "carrinho_id")
     private Carrinho carrinho;
 
     public ItemCarrinho() {}

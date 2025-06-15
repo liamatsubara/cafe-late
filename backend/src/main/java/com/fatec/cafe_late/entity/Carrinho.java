@@ -10,7 +10,7 @@ public class Carrinho {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "carrinho", cascade = CascadeType.ALL)
     private List<ItemCarrinho> itens;
 
     @ManyToOne
