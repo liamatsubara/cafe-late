@@ -4,7 +4,7 @@ import com.fatec.cafe_late.entity.ItemCarrinho;
 import com.fatec.cafe_late.entity.Carrinho;
 import com.fatec.cafe_late.entity.Produto;
 import com.fatec.cafe_late.entity.Usuario;
-import com.fatec.cafe_late.repository.PedidoRepository;
+import com.fatec.cafe_late.repository.CarrinhoRepository;
 import com.fatec.cafe_late.repository.ProdutoRepository;
 import com.fatec.cafe_late.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.List;
 public class PedidoService {
 
     @Autowired
-    private PedidoRepository pedidoRepository;
+    private CarrinhoRepository carrinhoRepository;
 
     @Autowired
     private ProdutoRepository produtoRepository;
@@ -32,7 +32,7 @@ public class PedidoService {
             item.setPedido(carrinho);
         }
 
-        return pedidoRepository.save(carrinho);
+        return carrinhoRepository.save(carrinho);
     }
 
     private void validarUsuario(Usuario usuario)  throws Exception{
@@ -66,24 +66,24 @@ public class PedidoService {
     }
 
     public Carrinho obterPedido(Long id) {
-        return pedidoRepository.findById(id).orElseThrow(() -> new RuntimeException("Pedido com id: " + id + " não encontrado!"));
+        return carrinhoRepository.findById(id).orElseThrow(() -> new RuntimeException("Pedido com id: " + id + " não encontrado!"));
     }
 
     public List<Carrinho> obterPedidos() {
-        return pedidoRepository.findAll();
+        return carrinhoRepository.findAll();
     }
 
     public Carrinho atualizar(Carrinho carrinho) throws Exception {
-        if (!pedidoRepository.existsById(carrinho.getId())) {
+        if (!carrinhoRepository.existsById(carrinho.getId())) {
             throw new Exception("Pedido com ID " + carrinho.getId() + " não encontrado.");
         }
-        return pedidoRepository.save(carrinho);
+        return carrinhoRepository.save(carrinho);
     }
 
     public void deletar(Long id) throws Exception {
-        if (!pedidoRepository.existsById(id)) {
+        if (!carrinhoRepository.existsById(id)) {
             throw new Exception("Pedido com ID " + id + " não encontrado.");
         }
-        pedidoRepository.deleteById(id);
+        carrinhoRepository.deleteById(id);
     }
 }
