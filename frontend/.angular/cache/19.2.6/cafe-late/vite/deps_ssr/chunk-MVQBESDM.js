@@ -2,7 +2,7 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-UXQJCVK3.js";
+} from "./chunk-OKHGTVRB.js";
 import {
   Attribute,
   ChangeDetectorRef,
@@ -46,6 +46,7 @@ import {
   numberAttribute,
   performanceMarkFeature,
   registerLocaleData,
+  require_cjs,
   setClassMetadata,
   stringify,
   untracked,
@@ -60,10 +61,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-NFJQ5BIS.js";
-import {
-  require_cjs
-} from "./chunk-AQYIT73X.js";
+} from "./chunk-AYIISLBR.js";
 import {
   __spreadProps,
   __spreadValues,
@@ -5014,4 +5012,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-UEE33MIM.js.map
+//# sourceMappingURL=chunk-MVQBESDM.js.map
