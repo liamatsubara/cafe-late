@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "pedido")
+@Table(name = "carrinho")
 public class Carrinho {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

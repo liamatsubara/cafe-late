@@ -3,7 +3,7 @@ package com.fatec.cafe_late.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "item_pedido")
+@Table(name = "item_carrinho")
 public class ItemCarrinho {
 
     @Id
