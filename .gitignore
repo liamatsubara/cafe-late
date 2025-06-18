@@ -27,4 +27,68 @@
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
-/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# =======================
+# Build Output
+# =======================
+build/
+target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# =======================
+# Node / JavaScript
+# =======================
+node_modules/
+**/node_modules/
+npm-debug.log
+yarn-error.log
+
+# =======================
+# Angular / Frontend
+# =======================
+/dist/
+/tmp/
+/out-tsc/
+/.angular/
+/.angular/cache
+.angular/cache/**
+.angular/config.json
+.angular/cli.json
+.angular/tsconfig.*
+.angular/*.tsbuildinfo
+.angular-local/
+.angular-lock.json
+npm-debug.log
+yarn.lock
+.env
+.env.*.local
+/.firebase/
+/firebase-debug.log
+
+# =======================
+# Miscellaneous
+# =======================
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+.c9/
+*.launch
+*.sublime-workspace
+.history/*
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# =======================
+# System Files
+# =======================
+.DS_Store
+Thumbs.db
